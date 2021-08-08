@@ -323,7 +323,7 @@ case $FRAGEANFANG in
 		echo "auth required pam_google_authenticator.so" >> /etc/pam.d/sshd 
 		echo "Führen Sie als Standardnutzer folgende Schritte aus, um 2FA zu aktivieren:"
 		echo "Das Programm google-authenticator starten. Bitte beantworten die Fragen wie folgt: y, y, y, n, y und notieren Sie sich die genannten Emergency Scratch Codes"
-		echo "Nun muss SELinux angepasst werden, da sonst der Zugriff auf pam_google_authenticator blockiert wird: Per root ausführen: semanage fcontext -a -s user_u -t lib_t /usr/lib/security/pam_google_authenticator.so" # SELinux Rule selbst erstellt.
+		echo "Nun muss SELinux angepasst werden, da sonst der Zugriff auf pam_google_authenticator blockiert wird: Per root ausführen: semanage fcontext -a -s user_u -t lib_t /usr/lib/security/pam_google_authenticator.so"
 		echo "Abschließend den SSH-Daemon als root neustarten: systemctl restart sshd"
 		;;
 	*)
